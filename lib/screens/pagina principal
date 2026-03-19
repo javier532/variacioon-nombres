@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'dart:math';
 import 'favorites_page.dart';
 
-// ================= HOME =================
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
