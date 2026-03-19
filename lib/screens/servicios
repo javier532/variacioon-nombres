@@ -1,0 +1,15 @@
+import 'dart:math';
+import '../utils/constants.dart';
+
+class NameService {
+  List<String> generateAllCombinations() {
+    List<String> combinations = [];
+    for (var first in Constants.firstWords) {
+      for (var second in Constants.secondWords) {
+        combinations.add(first + second);
+      }
+    }
+    combinations.shuffle(Random());
+    return combinations;
+  }
+}
