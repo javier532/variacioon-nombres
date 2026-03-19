@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
-import 'screens/home_page.dart';
+import 'home_page.dart';
 
 void main() {
   runApp(const MyApp());
 }
 
+// ================= APP =================
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
