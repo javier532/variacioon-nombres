@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import '../services/name_service.dart';
-import '../widgets/name_card.dart';
+import 'dart:math';
 import 'favorites_page.dart';
 
+// ================= HOME =================
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
@@ -33,7 +33,6 @@ class _HomePageState extends State<HomePage> {
     getNextWord();
   }
 
-  // 🔥 Generar TODAS las combinaciones
   void generateAllCombinations() {
     for (var first in firstWords) {
       for (var second in secondWords) {
@@ -43,7 +42,6 @@ class _HomePageState extends State<HomePage> {
     allCombinations.shuffle(Random());
   }
 
-  // 🔄 Obtener siguiente palabra SIN repetir
   void getNextWord() {
     setState(() {
       if (currentIndex < allCombinations.length) {
@@ -55,7 +53,6 @@ class _HomePageState extends State<HomePage> {
     });
   }
 
-  // ❤️ Favoritos
   void toggleFavorite() {
     setState(() {
       if (favorites.contains(currentWord)) {
@@ -66,7 +63,6 @@ class _HomePageState extends State<HomePage> {
     });
   }
 
-  // 📍 Navegación
   void goToFavorites() {
     Navigator.push(
       context,
@@ -149,13 +145,6 @@ class _HomePageState extends State<HomePage> {
                 ],
               )
             ],
-          ),
-        ),
-      ),
-    );
-  }
-}
-
           ),
         ),
       ),
